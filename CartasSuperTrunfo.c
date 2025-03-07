@@ -11,6 +11,10 @@ int main() {
     float pib;
     int turistico;
 
+    float densidade_populacional;
+    float pib_per_capita;
+
+    
     printf("Digite seu estado de A até H: ");
         scanf(" %c", &estado); 
 
@@ -32,6 +36,10 @@ int main() {
     printf("Digite a quantidade de pontos turísticos: ");
         scanf("%d", &turistico); 
 
+ 
+        densidade_populacional = populacao / area;
+        pib_per_capita = pib / populacao;  
+    
 
     printf("\nEstado: %c\n", estado);
     printf("Código da carta: %s\n", codigo_da_carta);
@@ -40,6 +48,14 @@ int main() {
     printf("Área: %.2f km²\n", area);
     printf("PIB: R$ %.2f\n", pib);
     printf("Pontos turísticos: %d\n", turistico);
+
+
+    printf("\nAgora, vamos dar uma olhada nos números interessantes sobre %s:\n", cidade);
+    printf("A densidade populacional de %s é de %.2f habitantes por km².\n", cidade, densidade_populacional);
+    printf("Ou seja, em média, há %.2f pessoas em cada quilômetro quadrado de %s.\n", densidade_populacional, cidade);
+    printf("O PIB per capita de %s é de R$ %.2f por pessoa.\n", cidade, pib_per_capita);
+    printf("Isso significa que, em média, cada morador de %s teria aproximadamente esse valor de riqueza gerada em sua cidade.\n", cidade);
+
 
     printf("\n--- Coleta de Dados para a Segunda Carta ---\n");
     printf("Digite seu estado de A até H: ");
@@ -63,7 +79,10 @@ int main() {
     printf("Digite a quantidade de pontos turísticos: ");
     scanf("%d", &turistico);
     
-    //carta 2 
+
+    densidade_populacional = populacao / area;
+    pib_per_capita = pib / populacao;  
+
 
     printf("\n--- Dados da Segunda Carta ---\n");
     printf("Estado: %c\n", estado);
@@ -73,6 +92,13 @@ int main() {
     printf("Área: %.2f km²\n", area);
     printf("PIB: R$ %.2f\n", pib);
     printf("Pontos turísticos: %d\n", turistico);
+
+
+    printf("\nAgora, vamos dar uma olhada nos números interessantes sobre %s:\n", cidade);
+    printf("A densidade populacional de %s é de %.2f habitantes por km².\n", cidade, densidade_populacional);
+    printf("Ou seja, em média, há %.2f pessoas em cada quilômetro quadrado de %s.\n", densidade_populacional, cidade);
+    printf("O PIB per capita de %s é de R$ %.2f por pessoa.\n", cidade, pib_per_capita);
+    printf("Isso significa que, em média, cada morador de %s teria aproximadamente esse valor de riqueza gerada em sua cidade.\n", cidade);
     
     return 0;
 }
