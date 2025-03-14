@@ -15,7 +15,6 @@ int main() {
     float pib_per_capita;
     float super_poder;
 
-    // Leitura dos dados da Carta 1
     printf("Digite seu estado de A até H: ");
     scanf(" %c", &estado); 
 
@@ -40,10 +39,8 @@ int main() {
     densidade_populacional = populacao / area;
     pib_per_capita = pib / populacao;
 
-    // Calcular Super Poder
     super_poder = (float)populacao + area + pib + turistico + pib_per_capita + (1 / densidade_populacional);
-
-    // Exibir os dados da Carta 1
+    
     printf("\n--- Dados da Primeira Carta ---\n");
     printf("Estado: %c\n", estado);
     printf("Código da carta: %s\n", codigo_da_carta);
@@ -87,10 +84,8 @@ int main() {
     densidade_populacional = populacao / area;
     pib_per_capita = pib / populacao;
 
-    // Calcular Super Poder para a segunda carta
     super_poder = (float)populacao + area + pib + turistico + pib_per_capita + (1 / densidade_populacional);
 
-    // Exibir os dados da Carta 2
     printf("\n--- Dados da Segunda Carta ---\n");
     printf("Estado: %c\n", estado);
     printf("Código da carta: %s\n", codigo_da_carta);
@@ -108,22 +103,14 @@ int main() {
 
     printf("O Super Poder de %s é: %.2f\n", cidade, super_poder);
 
-    // Comparações
     printf("\n--- Comparações das Cartas ---\n");
 
-    // Comparando População
     printf("População: Carta 1 venceu (%d)\n", (populacao > 0) ? 1 : 0);
-    // Comparando Área
     printf("Área: Carta 1 venceu (%d)\n", (area > 0) ? 1 : 0);
-    // Comparando PIB
     printf("PIB: Carta 1 venceu (%d)\n", (pib > 0) ? 1 : 0);
-    // Comparando Pontos turísticos
     printf("Pontos turísticos: Carta 1 venceu (%d)\n", (turistico > 0) ? 1 : 0);
-    // Comparando Densidade Populacional (menor vence)
     printf("Densidade Populacional: Carta 2 venceu (%d)\n", (densidade_populacional < densidade_populacional) ? 1 : 0);
-    // Comparando PIB per capita
     printf("PIB per Capita: Carta 1 venceu (%d)\n", (pib_per_capita > 0) ? 1 : 0);
-    // Comparando Super Poder
     printf("Super Poder: Carta 1 venceu (%d)\n", (super_poder > super_poder) ? 1 : 0);
     
     return 0;
